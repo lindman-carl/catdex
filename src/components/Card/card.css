@@ -1,0 +1,30 @@
+.card-container {
+    @apply
+    w-full h-full
+    min-w-[16rem] min-h-[16rem]
+    max-w-[16rem] max-h-[16rem]
+    relative
+    border rounded
+    shadow
+    overflow-hidden
+    cursor-pointer
+    active:-translate-y-2
+    transition-transform
+    ;
+}
+
+.image-container {
+    @apply
+    object-cover
+    ;
+}
+
+.title-container {
+    @apply
+    absolute z-10 bottom-0
+    w-full
+    bg-slate-600 bg-opacity-50
+    p-2
+    text-lg font-semibold text-slate-100
+    ;
+}
