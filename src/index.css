@@ -3,3 +3,16 @@
 @tailwind utilities;
 
 @import "./components/Card/card.css";
+
+@layer components {
+    .navbar-container {
+        @apply 
+        sticky top-0 z-50
+        w-full
+        px-4 py-2
+        text-2xl font-semibold text-slate-100
+        bg-slate-400
+        shadow
+        ;
+    }
+}
