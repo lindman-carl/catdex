@@ -1,6 +1,7 @@
 import React from "react";
 
 import CatImage from "../../assets/cat.webp";
+import { Cat } from "../../types/catTypes";
 
 const Image = () => {
   return (
@@ -13,15 +14,23 @@ const Image = () => {
   );
 };
 
-const Title = () => {
-  return <div className="title-container">Cat Breed</div>;
+type TitleProps = {
+  name: string;
 };
 
-const Card = () => {
+const Title = ({ name }: TitleProps) => {
+  return <div className="title-container">{name}</div>;
+};
+
+type CardProps = {
+  data: Cat;
+};
+
+const Card = ({ data }: CardProps) => {
   return (
     <div className="card-container">
       <Image />
-      <Title />
+      <Title name={data.name} />
     </div>
   );
 };
